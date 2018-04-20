@@ -1,0 +1,86 @@
+package com.company;
+
+// -------------------------------------------------------------------------------
+// Bring in the appropriate Java libraries
+//
+
+import java.util.*;
+import java.io.*;
+import java.util.Arrays;
+
+public class Main {
+
+    // Declare Constant Values
+    private static int maxArr = 25;
+    private static int INVALID = -1;
+    private static int FIRSTFIVE = 5;
+
+    // The main method
+    public static void main(String[] args) {
+
+        int myInt[] = new int[maxArr];
+
+        boolean fileDone = false;
+
+        for(int i=0; i < maxArr; i++) {
+            myInt[i] = INVALID;
+        }
+
+        System.out.println("\n\n");
+
+        try {
+
+            File f = new File("i.txt");
+            Scanner s = new Scanner(f);
+
+
+            for(int i=0; i < maxArr; i++) {
+
+                if (s.hasNext()) {
+                    myInt[i] = s.nextInt();
+                    System.out.print(myInt[i] + "  ");
+                }
+                else {
+
+                    fileDone = true;
+                    s.close();
+                    break;
+                }
+            }
+
+            System.out.println();
+            if (fileDone) {
+
+                System.out.println("\n\n");
+            }
+
+            else {
+
+                System.out.println("\n\tCAUTION: file has additional data, consider making array larger.");
+            }
+
+        }
+        catch (FileNotFoundException e) {
+            System.out.println(e);
+            e.printStackTrace();
+        }
+
+        for(int i=0; i < maxArr; i++) {
+            Arrays.sort (myInt);
+            System.out.print(myInt[i] + "  ");
+        }
+
+        System.out.println("\n\n");
+
+        for (int i=0; i < FIRSTFIVE; i++){
+            //ADD TOGETHER THE FIRST FIVE VALUES IN THE ARRAY
+            myInt[i]+= myInt[i];
+
+        }
+
+
+
+
+
+    } // end main method
+} // end main class

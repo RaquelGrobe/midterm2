@@ -72,12 +72,15 @@ public class Main {
 
         System.out.println("\n\n");
 
+        int total = 0;
         for (int i=0; i < FIRSTFIVE; i++){
             //ADD TOGETHER THE FIRST FIVE VALUES IN THE ARRAY
-            myInt[i]+= myInt[i];
-
+            total += myInt[i];
+            
         }
-
+        /*
+        System.out.println("\n\n****************************************************************
+        */
 
 
 

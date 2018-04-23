@@ -165,8 +165,16 @@ boolean fileDone = false;
         }
        
         
-        System.out.println("\n\n")
-    
+        System.out.println("\n\n");
+    //Leave 2 blank lines and then print the contents of the array in reverse order
+        // using a while loop.
+        /*
+        String [] REVERSE = new String [myStrings.length];
+        
+        while () {
+        System.out.print(REVERSE[])******************************************************************************
+        }
+        */
         }
 
 

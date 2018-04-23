@@ -78,12 +78,31 @@ public class Main {
             total += myInt[i];
             
         }
+        
+        System.out.println("\n\n" + total)
+        
+        
+        //Leave 2 blank lines and then find every value that is duplicated, and print
+        // this to the screen.
+        //read through the array
+        //keep track of numbers, and if a number is read twice, print it to the screen
+        //if/else statement?
+        
+        //read through array
         /*
-        System.out.println("\n\n****************************************************************
+        if (myInt[i] == ANY NUMBER ALREADY READ)*************{
+        System.out.print(myInt[i] + "  ")
+        
+        } else {
+            //read next number in array
+            }
+            
+       
+        
+        
+        
+        
         */
-
-
-
-
+        
     } // end main method
 } // end main class

@@ -107,6 +107,68 @@ String[] myStrings = new String[STRINGmaxArr];
 
 //Open and read the data from s.txt into the myStrings array 
 
+boolean fileDone = false;
+
+        for(int j=0; j < STRINGmaxArr; j++) {
+            myStrings[j] = INVALID;
+        }
+
+        System.out.println("\n\n");
+
+      
+        try {
+
+            File f = new File("s.txt");
+            Scanner s = new Scanner(f);
+            //if not working check the f on this scanner**************************
+           
+           while (s.hasNext && j =< STRINGmaxArr){
+                myStrings[j] = s.nextString();
+                System.out.print(myStrings[j] + "  ");
+                
+                }
+            
+
+            /*
+            for(int j=0; j < STRINGmaxArr; j++) {
+
+                if (s.hasNext()) {
+                    myStrings[j] = s.nextString();
+                    System.out.print(myStrings[j] + "  ");
+                    //if not working check ^ myStrings[j] right there
+                    
+                }
+                else {
+
+                    fileDone = true;
+                    s.close();
+                    break;
+                }
+            }
+
+            System.out.println();
+            if (fileDone) {
+
+                System.out.println("\n\n");
+            }
+
+            else {
+
+                System.out.println("\n\tCAUTION: file has additional data, consider making array larger.");
+            }
+
+        }
+        */
+        catch (FileNotFoundException e) {
+            System.out.println(e);
+            e.printStackTrace();
+        }
+       
+        
+        System.out.println("\n\n")
+    
+        }
+
 
         
     } // end main method
